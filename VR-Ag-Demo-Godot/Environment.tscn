@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="Environment" type="Spatial"]
+
+[node name="World" type="Spatial" parent="."]
+
+[node name="ARVROrigin" type="ARVROrigin" parent="."]
+
+[node name="ARVRCamera" type="ARVRCamera" parent="ARVROrigin"]

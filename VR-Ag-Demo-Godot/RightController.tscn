@@ -1,0 +1,23 @@
+[gd_scene format=2]
+
+[node name="ARVRController" type="ARVRController"]
+
+[node name="Hand" type="MeshInstance" parent="."]
+
+[node name="RayCast" type="RayCast" parent="."]
+
+[node name="Mesh" type="MeshInstance" parent="RayCast"]
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+
+[node name="Grab_Pos" type="Position3D" parent="."]
+
+[node name="Sleep_Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Sleep_Area"]
+
+[node name="Grab_Cast" type="RayCast" parent="."]
+
+[node name="Mesh" type="MeshInstance" parent="Grab_Cast"]
