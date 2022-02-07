@@ -315,6 +315,7 @@ panorama = ExtResource( 7 )
 [sub_resource type="Environment" id=37]
 background_mode = 2
 background_sky = SubResource( 36 )
+background_sky_orientation = Basis( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1 )
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 6 )
