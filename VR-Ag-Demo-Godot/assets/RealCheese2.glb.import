@@ -2,17 +2,17 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/left_hand.glb-77ac71087f4863f9f653fbf9e0d7f139.scn"
+path="res://.import/RealCheese2.glb-7bef28ee1ebbcfce67dc310a9532d898.scn"
 
 [deps]
 
-source_file="res://addons/godot-openxr/assets/valve_hand_models/left_hand.glb"
-dest_files=[ "res://.import/left_hand.glb-77ac71087f4863f9f653fbf9e0d7f139.scn" ]
+source_file="res://assets/RealCheese2.glb"
+dest_files=[ "res://.import/RealCheese2.glb-7bef28ee1ebbcfce67dc310a9532d898.scn" ]
 
 [params]
 
 nodes/root_type="Spatial"
-nodes/root_name="HandModel"
+nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
@@ -21,7 +21,7 @@ materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
 meshes/octahedral_compression=true
-meshes/compress=true
+meshes/compress=4286
 meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
