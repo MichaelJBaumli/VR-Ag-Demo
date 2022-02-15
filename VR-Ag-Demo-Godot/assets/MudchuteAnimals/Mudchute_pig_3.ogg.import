@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mudchute_pig_3.ogg-d340894a53f0153ec9a06702b48af1fa.oggstr"
+
+[deps]
+
+source_file="res://assets/MudchuteAnimals/Mudchute_pig_3.ogg"
+dest_files=[ "res://.import/Mudchute_pig_3.ogg-d340894a53f0153ec9a06702b48af1fa.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

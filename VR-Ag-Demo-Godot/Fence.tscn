@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Fence/Fence.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="Skin" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 17.9201, 13.6793, 1.69212 )
+
+[node name="Fence" type="Spatial"]
+
+[node name="Plane" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+skin = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.8, 0 )
+shape = SubResource( 1 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-d1e33d334833c02eab7a46a8de24d243.stex"
+path="res://.import/fence.png-f08036087ff9114235fd4920855b1e76.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/godot-openxr/icon.png"
-dest_files=[ "res://.import/icon.png-d1e33d334833c02eab7a46a8de24d243.stex" ]
+source_file="res://assets/Fence/fence.png"
+dest_files=[ "res://.import/fence.png-f08036087ff9114235fd4920855b1e76.stex" ]
 
 [params]
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mudchute_duck_1.ogg-e5813ae37d8b73c8ca52933df773f954.oggstr"
+
+[deps]
+
+source_file="res://assets/MudchuteAnimals/Mudchute_duck_1.ogg"
+dest_files=[ "res://.import/Mudchute_duck_1.ogg-e5813ae37d8b73c8ca52933df773f954.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
