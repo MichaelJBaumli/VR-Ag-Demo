@@ -47,7 +47,7 @@ enabled=PoolStringArray(  )
 
 [gdnative]
 
-singletons=[ "res://addons/godot-openxr/config/godot_openxr.gdnlib" ]
+singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib", "res://addons/godot-openxr/config/godot_openxr.gdnlib" ]
 
 [physics]
 
