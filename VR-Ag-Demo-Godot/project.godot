@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "RigidBody",
+"class": "VR_Interactable_Rigidbody",
+"language": "GDScript",
+"path": "res://VR_Interactable_Rigidbody.gd"
+}, {
 "base": "Area",
 "class": "XRToolsInteractableArea",
 "language": "GDScript",
@@ -25,6 +30,7 @@ _global_script_classes=[ {
 "path": "res://addons/godot-xr-tools/objects/Object_pickable.gd"
 } ]
 _global_script_class_icons={
+"VR_Interactable_Rigidbody": "",
 "XRToolsInteractableArea": "",
 "XRToolsInteractableBody": "",
 "XRToolsPickable": ""

@@ -20,13 +20,42 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="Function_Teleport" parent="FPSController/LeftHandController" index="1" instance=ExtResource( 2 )]
+enabled = true
+teleport_button = 15
+can_teleport_color = Color( 0, 1, 0, 1 )
+cant_teleport_color = Color( 1, 0, 0, 1 )
+player_height = 1.8
+player_radius = 0.4
+strength = 5.0
+max_slope = 20.0
 camera = NodePath("../../ARVRCamera")
 
-[node name="MeshInstance" parent="FPSController/RightHandController" index="0"]
-mesh = SubResource( 1 )
-material/0 = null
+[node name="Grab_Pos" type="Position3D" parent="FPSController/LeftHandController" index="2"]
 
-[node name="Function_Direct_movement" parent="FPSController/RightHandController" index="1" instance=ExtResource( 3 )]
+[node name="GrabCast" type="RayCast" parent="FPSController/LeftHandController" index="3"]
+
+[node name="Mesh" type="MeshInstance" parent="FPSController/LeftHandController/GrabCast"]
+
+[node name="Area" type="Area" parent="FPSController/LeftHandController" index="4"]
+input_ray_pickable = false
+
+[node name="CollisionShape" type="CollisionShape" parent="FPSController/LeftHandController/Area"]
+
+[node name="Grab_Pos" type="Position3D" parent="FPSController/RightHandController" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+
+[node name="GrabCast" type="RayCast" parent="FPSController/RightHandController" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+
+[node name="Mesh" type="MeshInstance" parent="FPSController/RightHandController/GrabCast"]
+
+[node name="Area" type="Area" parent="FPSController/RightHandController" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+input_ray_pickable = false
+
+[node name="CollisionShape" type="CollisionShape" parent="FPSController/RightHandController/Area"]
+
+[node name="Function_Direct_movement" parent="FPSController/RightHandController" index="3" instance=ExtResource( 3 )]
 camera = NodePath("../../ARVRCamera")
 
 [editable path="FPSController"]
