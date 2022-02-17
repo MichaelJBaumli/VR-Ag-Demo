@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Horse.obj-2dd95ad9377c4d4273fd8932b4b227da.mesh"
+
+[deps]
+
+files=[ "res://.import/Horse.obj-2dd95ad9377c4d4273fd8932b4b227da.mesh" ]
+
+source_file="res://assets/Farm Animals Animated by Quaternius/OBJ/Horse.obj"
+dest_files=[ "res://.import/Horse.obj-2dd95ad9377c4d4273fd8932b4b227da.mesh", "res://.import/Horse.obj-2dd95ad9377c4d4273fd8932b4b227da.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

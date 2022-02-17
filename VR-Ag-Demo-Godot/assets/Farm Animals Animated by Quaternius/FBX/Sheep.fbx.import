@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/vr_glove_right_model_slim.glb-c6782795f1fc3235de97a5f6c8ba1231.scn"
+path="res://.import/Sheep.fbx-27bf5615d5cdfe10e581bb5e6ed3b73e.scn"
 
 [deps]
 
-source_file="res://addons/godot-openvr/meshes/vr_glove_right_model_slim.glb"
-dest_files=[ "res://.import/vr_glove_right_model_slim.glb-c6782795f1fc3235de97a5f6c8ba1231.scn" ]
+source_file="res://assets/Farm Animals Animated by Quaternius/FBX/Sheep.fbx"
+dest_files=[ "res://.import/Sheep.fbx-27bf5615d5cdfe10e581bb5e6ed3b73e.scn" ]
 
 [params]
 
