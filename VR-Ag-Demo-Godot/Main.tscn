@@ -9,7 +9,7 @@
 [ext_resource path="res://CheeseWheel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.tscn" type="PackedScene" id=8]
 [ext_resource path="res://MILK_carton.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Low_Poly_Barn.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/Low_Poly_Barn.fbx" type="PackedScene" id=10]
 [ext_resource path="res://addons/godot-xr-tools/functions/Function_Teleport.tscn" type="PackedScene" id=11]
 [ext_resource path="res://addons/godot-xr-tools/functions/Function_Direct_movement.tscn" type="PackedScene" id=12]
 
@@ -334,9 +334,6 @@ shadow_enabled = true
 [node name="Low_Poly_Barn" type="Spatial" parent="."]
 transform = Transform( -1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 4.706, 0, 0 )
 
-[node name="Low_Poly_Barn" parent="Low_Poly_Barn" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09465, 0, 0.705926 )
-
 [node name="RootNode" type="Spatial" parent="Low_Poly_Barn"]
 
 [node name="Model" type="Spatial" parent="Low_Poly_Barn/RootNode"]
@@ -434,6 +431,8 @@ material/0 = SubResource( 32 )
 [node name="Mesh15" type="MeshInstance" parent="Low_Poly_Barn/RootNode/Model/Group1/Group15"]
 mesh = SubResource( 33 )
 material/0 = SubResource( 34 )
+
+[node name="Low_Poly_Barn" parent="Low_Poly_Barn" instance=ExtResource( 10 )]
 
 [node name="PlayerMovement" type="Spatial" parent="."]
 
