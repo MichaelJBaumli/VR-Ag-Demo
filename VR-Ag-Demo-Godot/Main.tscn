@@ -323,12 +323,12 @@ transform = Transform( 60, 0, 0, 0, 0, 0, 0, 0, 60, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.01765, -1.78993, 2.97432 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.018, -1, 2.974 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
 [node name="Sun" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.181, 0.983483, 0, -0.983483, 0.181, -0.199405, 13.0606, 30.2541 )
+transform = Transform( 1, 0, 0, 0, 0.695512, 0.718515, 0, -0.718515, 0.695512, -0.199405, 13.0606, 30.2541 )
 shadow_enabled = true
 
 [node name="Low_Poly_Barn" type="Spatial" parent="."]
