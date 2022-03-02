@@ -4,19 +4,24 @@
 [ext_resource path="res://CheeseWheel.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CylinderShape" id=1]
-radius = 2.79541
-height = 1.36198
+radius = 0.261425
+height = 0.148584
 
 [node name="CheesePickable" instance=ExtResource( 1 )]
+collision_mask = 3
 can_sleep = false
-highlight_mesh_instance = NodePath("RealCheese2")
+highlight_mesh_instance = NodePath("MeshInstance")
+picked_up_layer = 2
 
 [node name="PickupCenter" parent="." index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.313488, 0, -2.08031 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0354567, -0.0667101, -0.000192642 )
 
 [node name="CollisionShape" parent="." index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.461127, 0.676365, -0.461127 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.067086, 0.0468557, -0.00843087 )
 shape = SubResource( 1 )
 
-[node name="RealCheese2" parent="." index="2" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0031147, -0.0478477, 1.54346 )
+[node name="MeshInstance" type="MeshInstance" parent="." index="2"]
+transform = Transform( 0.25, 0, 0, 0, 0.05, 0, 0, 0, 0.25, -0.0459118, 0.0247608, -0.0105914 )
+
+[node name="RealCheese2" parent="MeshInstance" index="0" instance=ExtResource( 2 )]
+transform = Transform( 0.4, 0, 0, 0, 2, 0, 0, 0, 0.4, 0.196106, -1.45217, 0.77523 )
