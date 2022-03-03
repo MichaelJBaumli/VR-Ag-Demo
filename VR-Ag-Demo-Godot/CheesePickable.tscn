@@ -8,7 +8,7 @@ radius = 0.261425
 height = 0.148584
 
 [node name="CheesePickable" instance=ExtResource( 1 )]
-collision_mask = 3
+collision_layer = 4
 can_sleep = false
 highlight_mesh_instance = NodePath("MeshInstance")
 picked_up_layer = 2

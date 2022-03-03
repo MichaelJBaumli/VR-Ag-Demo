@@ -7,7 +7,7 @@
 extents = Vector3( 0.199579, 0.0447359, 0.0532702 )
 
 [node name="ButterPickup" instance=ExtResource( 2 )]
-collision_mask = 3
+collision_layer = 4
 can_sleep = false
 highlight_mesh_instance = NodePath("MeshInstance")
 picked_up_layer = 2

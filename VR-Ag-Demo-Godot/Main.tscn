@@ -18,19 +18,19 @@ size = Vector3( 60, 2, 60 )
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.027451, 0.670588, 0.145098, 1 )
 
-[sub_resource type="BoxShape" id=37]
+[sub_resource type="BoxShape" id=4]
 extents = Vector3( 0.271992, 0.091302, 0.215359 )
 
-[sub_resource type="BoxShape" id=38]
+[sub_resource type="BoxShape" id=5]
 extents = Vector3( 0.0392225, 4.73095, 0.507218 )
 
-[sub_resource type="BoxShape" id=39]
+[sub_resource type="BoxShape" id=6]
 extents = Vector3( 0.390853, 4.98444, 0.0232516 )
 
-[sub_resource type="BoxShape" id=40]
+[sub_resource type="BoxShape" id=7]
 extents = Vector3( 0.386916, 0.439373, 0.524336 )
 
-[sub_resource type="BoxShape" id=41]
+[sub_resource type="BoxShape" id=8]
 extents = Vector3( 0.03453, 5.40215, 0.0408825 )
 
 [node name="Main" type="Spatial"]
@@ -48,7 +48,7 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
 [node name="Sun" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.695512, 0.718515, 0, -0.718515, 0.695512, -0.199405, 13.0606, 30.2541 )
+transform = Transform( 1, 0, 0, 0, 0.695512, 0.718515, 0, -0.718515, 0.695512, 3.57518, 83.6443, 23.2288 )
 shadow_enabled = true
 
 [node name="MILK_carton" parent="." instance=ExtResource( 9 )]
@@ -67,7 +67,7 @@ collision_mask = 4
 
 [node name="CollisionShape" type="CollisionShape" parent="Crate3/Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0342276, 0.07049, 0 )
-shape = SubResource( 37 )
+shape = SubResource( 4 )
 
 [node name="StaticBody" type="StaticBody" parent="Crate3"]
 transform = Transform( 0.5, 0, 0, 0, 0.02128, 0, 0, 0, 0.5, 0.0962911, 0.152437, -0.13863 )
@@ -75,39 +75,39 @@ collision_mask = 2147483654
 
 [node name="wall1" type="CollisionShape" parent="Crate3/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25987, 0.457761, 0 )
-shape = SubResource( 38 )
+shape = SubResource( 5 )
 
 [node name="wall2" type="CollisionShape" parent="Crate3/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.451526, 0.325333, 0 )
-shape = SubResource( 38 )
+shape = SubResource( 5 )
 
 [node name="wall3" type="CollisionShape" parent="Crate3/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0912976, 0.402903, 0.517243 )
-shape = SubResource( 39 )
+shape = SubResource( 6 )
 
 [node name="wall4" type="CollisionShape" parent="Crate3/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0912976, 0.402903, -0.510984 )
-shape = SubResource( 39 )
+shape = SubResource( 6 )
 
 [node name="floor" type="CollisionShape" parent="Crate3/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0983904, -4.79696, 0 )
-shape = SubResource( 40 )
+shape = SubResource( 7 )
 
 [node name="support1" type="CollisionShape" parent="Crate3/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.416469, 0.348022, -0.462385 )
-shape = SubResource( 41 )
+shape = SubResource( 8 )
 
 [node name="support2" type="CollisionShape" parent="Crate3/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.416469, 0.348022, 0.460121 )
-shape = SubResource( 41 )
+shape = SubResource( 8 )
 
 [node name="support3" type="CollisionShape" parent="Crate3/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.216071, 0.348022, 0.457865 )
-shape = SubResource( 41 )
+shape = SubResource( 8 )
 
 [node name="support4" type="CollisionShape" parent="Crate3/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.225119, 0.348022, -0.462385 )
-shape = SubResource( 41 )
+shape = SubResource( 8 )
 
 [node name="CheesePickable" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.57352 )
