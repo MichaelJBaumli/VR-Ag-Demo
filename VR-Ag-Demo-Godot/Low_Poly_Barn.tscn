@@ -1,18 +1,10 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Low_Poly_Barn.gd" type="Script" id=1]
-[ext_resource path="res://assets/Low_Poly_Barn/Low Poly Barn/Planks_004_Old.jpg" type="Texture" id=2]
-[ext_resource path="res://assets/Low_Poly_Barn/Low Poly Barn/Planks004_2K_AmbientOcclusion.jpg" type="Texture" id=3]
 [ext_resource path="res://assets/Low_Poly_Barn.fbx" type="PackedScene" id=4]
-
-[sub_resource type="SpatialMaterial" id=3]
-albedo_texture = ExtResource( 3 )
 
 [sub_resource type="BoxShape" id=14]
 extents = Vector3( 1.29068, 0.581662, 0.0395725 )
-
-[sub_resource type="SpatialMaterial" id=4]
-albedo_texture = ExtResource( 3 )
 
 [sub_resource type="BoxShape" id=15]
 extents = Vector3( 0.312645, 0.598328, 0.0556456 )
@@ -20,32 +12,14 @@ extents = Vector3( 0.312645, 0.598328, 0.0556456 )
 [sub_resource type="BoxShape" id=16]
 extents = Vector3( 1, 0.0863136, 0.0418655 )
 
-[sub_resource type="SpatialMaterial" id=1]
-albedo_texture = ExtResource( 2 )
-
 [sub_resource type="BoxShape" id=17]
 extents = Vector3( 1.22569, nan, 1.05923 )
-
-[sub_resource type="SpatialMaterial" id=2]
-albedo_texture = ExtResource( 3 )
 
 [sub_resource type="BoxShape" id=18]
 extents = Vector3( 0.0703914, 0.528475, 1.19139 )
 
 [sub_resource type="BoxShape" id=19]
 extents = Vector3( 0.0542512, 0.580929, 1.16312 )
-
-[sub_resource type="SpatialMaterial" id=7]
-albedo_texture = ExtResource( 3 )
-
-[sub_resource type="SpatialMaterial" id=9]
-albedo_texture = ExtResource( 3 )
-
-[sub_resource type="SpatialMaterial" id=10]
-albedo_texture = ExtResource( 2 )
-
-[sub_resource type="SpatialMaterial" id=11]
-albedo_texture = ExtResource( 3 )
 
 [sub_resource type="BoxShape" id=20]
 extents = Vector3( 0.0502027, 1, 0.0300258 )
@@ -54,15 +28,9 @@ extents = Vector3( 0.0502027, 1, 0.0300258 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13414, 0, 2.25461 )
 script = ExtResource( 1 )
 
-[node name="Mesh2" parent="RootNode/Model/Group1/Group3" index="0"]
-material/0 = SubResource( 3 )
-
 [node name="CollisionShape" type="CollisionShape" parent="RootNode/Model/Group1/Group3" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20409, 0.467087, -2.29461 )
 shape = SubResource( 14 )
-
-[node name="Mesh3" parent="RootNode/Model/Group1/Difference" index="0"]
-material/0 = SubResource( 4 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RootNode/Model/Group1/Difference" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.317363, 0.450336, -0.0116117 )
@@ -76,15 +44,9 @@ shape = SubResource( 15 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08627, 0.873658, 0.0549407 )
 shape = SubResource( 16 )
 
-[node name="Mesh5" parent="RootNode/Model/Group1/Group5" index="0"]
-material/0 = SubResource( 1 )
-
 [node name="CollisionShape" type="CollisionShape" parent="RootNode/Model/Group1/Group5" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21712, 1.01337, -1.19376 )
 shape = SubResource( 17 )
-
-[node name="Mesh6" parent="RootNode/Model/Group1/Group6" index="0"]
-material/0 = SubResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RootNode/Model/Group1/Group6" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0293837, 0.504369, -1.16207 )
@@ -93,18 +55,6 @@ shape = SubResource( 18 )
 [node name="CollisionShape" type="CollisionShape" parent="RootNode/Model/Group1/Group7" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36044, 0.423669, -1.15803 )
 shape = SubResource( 19 )
-
-[node name="Mesh8" parent="RootNode/Model/Group1/Group8" index="0"]
-material/0 = SubResource( 7 )
-
-[node name="Mesh11" parent="RootNode/Model/Group1/Group11" index="0"]
-material/0 = SubResource( 9 )
-
-[node name="Mesh12" parent="RootNode/Model/Group1/Group12" index="0"]
-material/0 = SubResource( 10 )
-
-[node name="Mesh13" parent="RootNode/Model/Group1/Group13" index="0"]
-material/0 = SubResource( 11 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RootNode/Model/Group1/Group13" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.207, 0.346617, -1.17131 )
