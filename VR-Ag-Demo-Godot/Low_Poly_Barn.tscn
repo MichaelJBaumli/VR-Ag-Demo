@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
+[ext_resource path="res://Low_Poly_Barn.gd" type="Script" id=1]
 [ext_resource path="res://assets/Low_Poly_Barn.fbx" type="PackedScene" id=4]
 
 [sub_resource type="BoxShape" id=14]
@@ -25,6 +26,7 @@ extents = Vector3( 0.0502027, 1, 0.0300258 )
 
 [node name="Low_Poly_Barn" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13414, 0, 2.25461 )
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RootNode/Model/Group1/Group3" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20409, 0.467087, -2.29461 )
