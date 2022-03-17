@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Low_Poly_Barn.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CratePickable.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tree_1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Main.gd" type="Script" id=6]
 [ext_resource path="res://CheeseWheel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://PlayerMovement.tscn" type="PackedScene" id=8]
@@ -58,8 +59,11 @@ transform = Transform( 0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0.52415 )
 [node name="RealCheese2" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 
+[node name="Tree_1" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6511, 0, 0 )
+
 [node name="Crate3" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.41215, -0.0357645, 7.52743 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.41298, -0.0357646, 7.527 )
 
 [node name="Area" type="Area" parent="Crate3"]
 transform = Transform( 0.6, 0, 0, 0, 1, 0, 0, 0, 1, 0.120934, 0, -0.129872 )

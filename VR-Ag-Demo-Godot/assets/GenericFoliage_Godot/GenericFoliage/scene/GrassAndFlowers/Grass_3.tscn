@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GenericFoliage/GLTF/PlantAtlas.material" type="Material" id=1]
+[ext_resource path="res://GenericFoliage/Material/PlantAtlasv2Material.tres" type="Material" id=2]
+
+[sub_resource type="ArrayMesh" id=61]
+resource_name = "Generic_Foliage_Plane027"
+surfaces/0 = {
+"aabb": AABB( -0.0893759, -1.75736e-07, -9.54159e-09, 0.250813, 1.0656, 1.00191e-05 ),
+"array_data": PoolByteArray( 50, 77, 37, 62, 249, 77, 25, 180, 93, 236, 35, 50, 0, 0, 126, 63, 11, 49, 231, 59, 32, 77, 37, 62, 116, 101, 136, 63, 84, 236, 35, 50, 0, 0, 126, 63, 11, 49, 124, 58, 184, 10, 183, 189, 116, 101, 136, 63, 88, 236, 35, 178, 0, 0, 126, 63, 106, 47, 124, 58, 172, 10, 183, 189, 7, 178, 60, 180, 88, 236, 35, 178, 0, 0, 126, 63, 106, 47, 231, 59 ),
+"array_index_data": PoolByteArray( 3, 0, 1, 0, 0, 0, 3, 0, 2, 0, 1, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 6,
+"material": ExtResource( 1 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 4
+}
+
+[node name="Grass_3" type="MeshInstance"]
+mesh = SubResource( 61 )
+material/0 = ExtResource( 2 )

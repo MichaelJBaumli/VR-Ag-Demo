@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GenericFoliage/GLTF/PlantAtlas.material" type="Material" id=1]
+[ext_resource path="res://GenericFoliage/Material/PlantAtlasv2Material.tres" type="Material" id=2]
+
+[sub_resource type="ArrayMesh" id=40]
+resource_name = "Generic_Foliage_Plane020"
+surfaces/0 = {
+"aabb": AABB( -0.457476, -3.17769e-07, -5.03554e-08, 0.931399, 1.45503, 1.00703e-05 ),
+"array_data": PoolByteArray( 163, 164, 242, 62, 231, 153, 170, 180, 250, 121, 171, 50, 0, 126, 126, 193, 165, 53, 93, 56, 173, 164, 242, 62, 78, 62, 186, 63, 248, 121, 171, 50, 0, 126, 126, 193, 165, 53, 217, 52, 81, 58, 234, 190, 232, 27, 218, 178, 92, 70, 88, 179, 0, 126, 126, 193, 83, 50, 93, 56, 71, 58, 234, 190, 77, 62, 186, 63, 92, 70, 88, 179, 0, 126, 126, 193, 83, 50, 217, 52, 5, 0, 168, 179, 131, 118, 53, 180, 193, 221, 135, 178, 0, 126, 126, 193, 97, 52, 93, 56, 10, 0, 124, 52, 77, 62, 186, 63, 200, 221, 135, 178, 0, 126, 126, 193, 97, 52, 217, 52 ),
+"array_index_data": PoolByteArray( 4, 0, 1, 0, 0, 0, 4, 0, 5, 0, 1, 0, 2, 0, 5, 0, 4, 0, 2, 0, 3, 0, 5, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 12,
+"material": ExtResource( 1 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 6
+}
+
+[node name="LeafStick2_7" type="MeshInstance"]
+mesh = SubResource( 40 )
+material/0 = ExtResource( 2 )
