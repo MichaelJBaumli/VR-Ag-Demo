@@ -13,3 +13,12 @@ material/0 = ExtResource( 2 )
 
 [node name="Mesh6" parent="Model/Group1/Group5" index="0"]
 material/0 = ExtResource( 2 )
+
+[node name="Mesh13" parent="Model/Group1/Group12" index="0"]
+material/0 = ExtResource( 2 )
+
+[node name="Mesh14" parent="Model/Group1/Group13" index="0"]
+material/0 = ExtResource( 2 )
+
+[node name="Mesh16" parent="Model/Group1/Group15" index="0"]
+material/0 = ExtResource( 2 )
