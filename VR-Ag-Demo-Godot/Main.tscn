@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Low_Poly_Barn.tscn" type="PackedScene" id=1]
+[ext_resource path="res://CratePickable.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=6]
 [ext_resource path="res://CheeseWheel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://PlayerMovement.tscn" type="PackedScene" id=8]
@@ -122,3 +123,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54853, 0.0957313, 1.62528 )
 
 [node name="Low_Poly_Barn" parent="." instance=ExtResource( 1 )]
 transform = Transform( -0.0639729, 0, -1.99898, 0, 2, 0, 1.99898, 0, -0.0639729, 4.00754, 0, -0.000114679 )
+
+[node name="CratePickable" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25089, 0.0278596, 6.18145 )
