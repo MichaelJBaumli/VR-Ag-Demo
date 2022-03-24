@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://addons/godot-xr-tools/objects/Object_pickable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Crate3.tscn" type="PackedScene" id=2]
@@ -18,9 +18,14 @@ extents = Vector3( 0.184811, 0.103004, 0.0250273 )
 [sub_resource type="BoxShape" id=5]
 extents = Vector3( 0.18662, 0.0149161, 0.256902 )
 
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.128645, 0.0538265, 0.209645 )
+
 [node name="CratePickable" type="Spatial"]
 
 [node name="PickableObject" parent="." instance=ExtResource( 1 )]
+collision_layer = 4
+collision_mask = 5
 highlight_mesh_instance = NodePath("MeshInstance")
 
 [node name="PickupCenter2" type="Spatial" parent="PickableObject"]
@@ -50,3 +55,11 @@ shape = SubResource( 4 )
 [node name="CollisionShape6" type="CollisionShape" parent="PickableObject"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.145685, 0.154849, 0.120301 )
 shape = SubResource( 5 )
+
+[node name="Area" type="Area" parent="PickableObject"]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape" type="CollisionShape" parent="PickableObject/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125044, 0.205216, 0.113777 )
+shape = SubResource( 6 )
