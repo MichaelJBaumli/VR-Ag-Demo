@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://iceCream.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/godot-xr-tools/objects/Object_pickable.tscn" type="PackedScene" id=2]
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.0368144
+
+[node name="IceCreamPickup" type="Spatial"]
+
+[node name="PickableObject" parent="." instance=ExtResource( 2 )]
+can_sleep = false
+highlight_mesh_instance = NodePath("MeshInstance")
+
+[node name="PickupCenter2" type="Spatial" parent="PickableObject"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00281233, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="PickableObject"]
+
+[node name="iceCream" parent="PickableObject/MeshInstance" instance=ExtResource( 1 )]
+
+[node name="CollisionShape2" type="CollisionShape" parent="PickableObject"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00372411, 0, 0.0222404 )
+shape = SubResource( 1 )
