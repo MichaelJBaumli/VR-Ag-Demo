@@ -17,4 +17,15 @@ func _ready():
 
 
 func _on_Area_area_entered(area):
-	pass
+	match area.type:
+		"cheese":# For cheese, carton, butter and icecream, (and later yogurt) will change scenes here depending on what object enters
+			pass
+		"carton":
+			pass
+		"butter":
+			pass
+		"icecream":
+			pass
+		"crate":
+			#DO NOTING DONT CHANGE SCENE THIS ONLY NEEDED A TYPE BECAUSE IT IS PICKABLE
+			pass

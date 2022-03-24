@@ -8,6 +8,7 @@ export (bool) var press_to_hold = true
 export (bool) var reset_transform_on_pickup = true
 export (NodePath) var highlight_mesh_instance = null
 export  (int, LAYERS_3D_PHYSICS) var picked_up_layer = 0
+export var type = "cheese"
 
 # Remember some state so we can return to it when the user drops the object
 onready var original_parent = get_parent()
