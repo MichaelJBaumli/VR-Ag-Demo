@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Low_Poly_Barn.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CratePickable.tscn" type="PackedScene" id=2]
@@ -25,6 +25,16 @@ size = Vector3( 60, 2, 60 )
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.215686, 0.556863, 0.0745098, 1 )
+
+[sub_resource type="CubeMesh" id=6]
+
+[sub_resource type="SpatialMaterial" id=7]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 3
+params_cull_mode = 1
+params_billboard_mode = 1
+albedo_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="PanoramaSky" id=4]
 panorama = ExtResource( 13 )
@@ -245,6 +255,11 @@ type = "icecream"
 [node name="PlayerMovement" parent="." instance=ExtResource( 8 )]
 transform = Transform( -0.848252, 0, 0.529594, 0, 1, 0, -0.529594, 0, -0.848252, 0, 0, 0 )
 
+[node name="MeshInstance" type="MeshInstance" parent="PlayerMovement"]
+transform = Transform( 0.427058, 0, 0.904224, 0, 10, 0, -0.904224, 0, 0.427058, 0, 1.7, 0 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
 [node name="Low_Poly_Barn" parent="." instance=ExtResource( 1 )]
 transform = Transform( -4.88762e-07, 0, -3, 0, 5, 0, 3, 0, -4.88762e-07, 4.00754, 0, -0.000114679 )
 
@@ -262,7 +277,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.134331, 0.24747, -0.124764 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 5 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
 [connection signal="area_entered" from="CratePickable/PickableObject/Area" to="." method="_on_Area_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 [editable path="iceCream"]
 
