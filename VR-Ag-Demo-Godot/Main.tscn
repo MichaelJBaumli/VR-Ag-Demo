@@ -60,7 +60,7 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
 [node name="Spotlight" type="SpotLight" parent="."]
-transform = Transform( 0.908394, 0.101916, -0.405505, 0.402345, 0.0507843, 0.914079, 0.113753, -0.993496, 0.00512658, 4.06604, 1.65132, 2.50924 )
+transform = Transform( 0.908394, 0.101916, -0.405505, 0.402345, 0.0507843, 0.914079, 0.113753, -0.993496, 0.00512658, 4.06604, 4.06009, 3.73612 )
 light_color = Color( 0.972549, 1, 0.180392, 1 )
 light_energy = 2.0
 light_indirect_energy = 0.0
@@ -246,7 +246,7 @@ type = "icecream"
 transform = Transform( -0.848252, 0, 0.529594, 0, 1, 0, -0.529594, 0, -0.848252, 0, 0, 0 )
 
 [node name="Low_Poly_Barn" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.0639729, 0, -1.99898, 0, 2, 0, 1.99898, 0, -0.0639729, 4.00754, 0, -0.000114679 )
+transform = Transform( -4.88762e-07, 0, -3, 0, 5, 0, 3, 0, -4.88762e-07, 4.00754, 0, -0.000114679 )
 
 [node name="CratePickable" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.999965, 0.00834258, 0, -0.00834258, 0.999965, 0, 0, 0, 1, 1.09698, -0.12091, 1.02855 )
