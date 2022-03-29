@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Yogurt.glb-5e5bead01cf22f88ceebee2cf183802a.scn"
+path="res://.import/Scene_Morning.fbx-150d4629e5e6baa0b07073eff549f31a.scn"
 
 [deps]
 
-source_file="res://assets/Yogurt.glb"
-dest_files=[ "res://.import/Yogurt.glb-5e5bead01cf22f88ceebee2cf183802a.scn" ]
+source_file="res://assets/Outside env/43-scene_morning/Scene_Morning.fbx"
+dest_files=[ "res://.import/Scene_Morning.fbx-150d4629e5e6baa0b07073eff549f31a.scn" ]
 
 [params]
 
