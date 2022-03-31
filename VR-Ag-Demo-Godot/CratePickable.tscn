@@ -16,7 +16,7 @@ extents = Vector3( 0.0180238, 0.0980195, 0.232402 )
 extents = Vector3( 0.184811, 0.103004, 0.0250273 )
 
 [sub_resource type="BoxShape" id=5]
-extents = Vector3( 0.18662, 0.0149161, 0.256902 )
+extents = Vector3( 0.18662, 0.0347801, 0.256902 )
 
 [sub_resource type="BoxShape" id=6]
 extents = Vector3( 0.128645, 0.0538265, 0.209645 )
@@ -53,7 +53,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.134331, 0.24747, -0.124764 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape6" type="CollisionShape" parent="PickableObject"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.145685, 0.154849, 0.120301 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.145685, 0.154832, 0.120301 )
 shape = SubResource( 5 )
 
 [node name="Area" type="Area" parent="PickableObject"]

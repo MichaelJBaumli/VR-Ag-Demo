@@ -26,9 +26,9 @@ size = Vector3( 60, 2, 60 )
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.215686, 0.556863, 0.0745098, 1 )
 
-[sub_resource type="CubeMesh" id=6]
+[sub_resource type="CubeMesh" id=4]
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=5]
 flags_unshaded = true
 vertex_color_use_as_albedo = true
 params_blend_mode = 3
@@ -36,12 +36,12 @@ params_cull_mode = 1
 params_billboard_mode = 1
 albedo_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="PanoramaSky" id=4]
+[sub_resource type="PanoramaSky" id=6]
 panorama = ExtResource( 13 )
 
-[sub_resource type="Environment" id=5]
+[sub_resource type="Environment" id=7]
 background_mode = 2
-background_sky = SubResource( 4 )
+background_sky = SubResource( 6 )
 background_sky_orientation = Basis( 2.65431e-14, 1.62921e-07, 1, 1, -1.62921e-07, 0, 1.62921e-07, 1, -1.62921e-07 )
 fog_color = Color( 0.0627451, 0.470588, 0.878431, 1 )
 fog_sun_amount = 0.78
@@ -94,8 +94,6 @@ directional_shadow_blend_splits = true
 
 [node name="ButterPickup" parent="." instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54853, 0.0505172, 1.62528 )
-press_to_hold = true
-reset_transform_on_pickup = true
 type = "butter"
 
 [node name="hay_bale" parent="." instance=ExtResource( 17 )]
@@ -225,17 +223,12 @@ transform = Transform( 0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0.52415 )
 
 [node name="CheesePickable" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.57352 )
-press_to_hold = true
-reset_transform_on_pickup = true
-type = "cheese"
 
 [node name="CollisionShape" parent="CheesePickable" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.067086, 0.0468557, -0.00843096 )
 
 [node name="CartonPickup" parent="." instance=ExtResource( 16 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.29841 )
-press_to_hold = true
-reset_transform_on_pickup = true
 type = "carton"
 
 [node name="MILK_carton" parent="CartonPickup/MeshInstance" index="0"]
@@ -247,9 +240,6 @@ transform = Transform( 0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 7.14 )
 [node name="IceCreamPickup" parent="." instance=ExtResource( 11 )]
 
 [node name="PickableObject" parent="IceCreamPickup" index="0"]
-press_to_hold = true
-reset_transform_on_pickup = true
-picked_up_layer = 0
 type = "icecream"
 
 [node name="PlayerMovement" parent="." instance=ExtResource( 8 )]
@@ -257,8 +247,9 @@ transform = Transform( -0.848252, 0, 0.529594, 0, 1, 0, -0.529594, 0, -0.848252,
 
 [node name="MeshInstance" type="MeshInstance" parent="PlayerMovement"]
 transform = Transform( 0.427058, 0, 0.904224, 0, 10, 0, -0.904224, 0, 0.427058, 0, 1.7, 0 )
-mesh = SubResource( 6 )
-material/0 = SubResource( 7 )
+visible = false
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
 
 [node name="Low_Poly_Barn" parent="." instance=ExtResource( 1 )]
 transform = Transform( -4.88762e-07, 0, -3, 0, 5, 0, 3, 0, -4.88762e-07, 4.00754, 0, -0.000114679 )
@@ -267,16 +258,10 @@ transform = Transform( -4.88762e-07, 0, -3, 0, 5, 0, 3, 0, -4.88762e-07, 4.00754
 transform = Transform( 0.999965, 0.00834258, 0, -0.00834258, 0.999965, 0, 0, 0, 1, 1.09698, -0.12091, 1.02855 )
 
 [node name="PickableObject" parent="CratePickable" index="0"]
-press_to_hold = true
-reset_transform_on_pickup = true
-picked_up_layer = 0
 type = "crate"
 
-[node name="CollisionShape5" parent="CratePickable/PickableObject" index="7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.134331, 0.24747, -0.124764 )
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 5 )
+environment = SubResource( 7 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
