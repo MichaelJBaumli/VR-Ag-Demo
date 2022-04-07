@@ -3,4 +3,18 @@
 [ext_resource path="res://assets/grass1-albedo3.png" type="Texture" id=1]
 
 [resource]
+vertex_color_use_as_albedo = true
+albedo_color = Color( 0.27451, 0.811765, 0.180392, 1 )
 albedo_texture = ExtResource( 1 )
+depth_enabled = true
+depth_scale = 0.05
+depth_deep_parallax = false
+depth_flip_tangent = false
+depth_flip_binormal = false
+detail_enabled = true
+detail_mask = ExtResource( 1 )
+detail_blend_mode = 3
+detail_uv_layer = 1
+detail_albedo = ExtResource( 1 )
+detail_normal = ExtResource( 1 )
+uv1_triplanar_sharpness = 0.233258
