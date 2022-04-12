@@ -44,7 +44,7 @@ config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PoolStringArray( "godot-openvr", "godot-openxr" )
 
 [gdnative]
 
