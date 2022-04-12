@@ -37,11 +37,11 @@ detail_normal = ExtResource( 18 )
 uv1_offset = Vector3( 1, 0, 0 )
 uv1_triplanar = true
 
-[sub_resource type="BoxShape" id=4]
-extents = Vector3( 0.571008, 6.91504, 0.62728 )
-
 [sub_resource type="SphereShape" id=5]
 radius = 2.58393
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.571008, 6.91504, 0.62728 )
 
 [sub_resource type="BoxShape" id=6]
 extents = Vector3( 1.16332, 1.93315, 1.98168 )
@@ -178,7 +178,7 @@ type = "butter"
 transform = Transform( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, 0.182774, 1.22312, 15.2781 )
 
 [node name="Fences" type="Spatial" parent="."]
-transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 4.67448, 0, -5 )
+transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 4.674, 0.6, -5 )
 
 [node name="Fence" parent="Fences" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -113.45, 0, 0 )
@@ -293,17 +293,21 @@ transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -6.54295, -0.0357646,
 
 [node name="Tree_1" parent="Trees" instance=ExtResource( 5 )]
 
-[node name="CollisionShape" type="CollisionShape" parent="Trees/Tree_1"]
-shape = SubResource( 4 )
+[node name="StaticBody" type="StaticBody" parent="Trees/Tree_1"]
 
-[node name="CollisionShape2" type="CollisionShape" parent="Trees/Tree_1"]
+[node name="CollisionShape2" type="CollisionShape" parent="Trees/Tree_1/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.398554, 4.96425, 0.912883 )
 shape = SubResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/Tree_1/StaticBody"]
+shape = SubResource( 4 )
 
 [node name="LogStack_1" parent="Trees" instance=ExtResource( 10 )]
 transform = Transform( -0.0111526, 0, -0.999938, 0, 1, 0, 0.999938, 0, -0.0111526, 17.0083, 0.195682, -13.7795 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Trees/LogStack_1"]
+[node name="StaticBody" type="StaticBody" parent="Trees/LogStack_1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/LogStack_1/StaticBody"]
 shape = SubResource( 6 )
 
 [node name="MILK_carton" parent="." instance=ExtResource( 9 )]
