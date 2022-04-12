@@ -16,6 +16,7 @@ This project is a VR Demo for educational use and will be made for the Agricultu
 - [Crate](https://opengameart.org/content/crate-3)
 - [Farm Animal Sounds](https://opengameart.org/content/farm-animals)
 - [Background Scenery](https://free3d.com/3d-model/beautiful-scenery-morning-evening-night-370168.html)
+- [Low-poly Tree](https://opengameart.org/users/mitylernal)
 - Cheese & Yogurt: Made By The One and Only PHIL LYONS
 - Donut: Made By The One and Only Vitaliy Tsytsyk
 - Butter: Made By The One and Only Blake Bennett
