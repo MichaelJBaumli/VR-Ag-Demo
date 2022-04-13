@@ -38,10 +38,10 @@ detail_normal = ExtResource( 18 )
 uv1_offset = Vector3( 1, 0, 0 )
 uv1_triplanar = true
 
-[sub_resource type="SphereShape" id=5]
+[sub_resource type="SphereShape" id=4]
 radius = 2.58393
 
-[sub_resource type="BoxShape" id=4]
+[sub_resource type="BoxShape" id=5]
 extents = Vector3( 0.571008, 6.91504, 0.62728 )
 
 [sub_resource type="BoxShape" id=6]
@@ -61,31 +61,31 @@ albedo_color = Color( 0, 0, 0, 1 )
 extents = Vector3( 0.0247202, 1, 1.27811 )
 
 [sub_resource type="BoxShape" id=10]
-extents = Vector3( 0.032047, 1, 1.23333 )
+extents = Vector3( 1, 0.001, 1.12587 )
 
 [sub_resource type="BoxShape" id=11]
-extents = Vector3( 1.20304, 1.34464, 0.0289377 )
+extents = Vector3( 0.0228507, 1.91596, 0.0407592 )
 
 [sub_resource type="BoxShape" id=12]
-extents = Vector3( 0.296228, 1.15676, 0.0442943 )
+extents = Vector3( 0.013798, 0.852585, 0.295446 )
 
 [sub_resource type="BoxShape" id=13]
-extents = Vector3( 0.303451, 1.16197, 0.0278432 )
+extents = Vector3( 0.0102343, 0.87341, 0.300629 )
 
 [sub_resource type="BoxShape" id=14]
 extents = Vector3( 0.74579, 0.241447, 0.0324237 )
 
 [sub_resource type="BoxShape" id=15]
-extents = Vector3( 0.0102343, 0.87341, 0.300629 )
+extents = Vector3( 0.303451, 1.16197, 0.0278432 )
 
 [sub_resource type="BoxShape" id=16]
-extents = Vector3( 0.013798, 0.852585, 0.295446 )
+extents = Vector3( 0.296228, 1.15676, 0.0442943 )
 
 [sub_resource type="BoxShape" id=17]
-extents = Vector3( 0.0228507, 1.91596, 0.0407592 )
+extents = Vector3( 1.20304, 1.34464, 0.0289377 )
 
 [sub_resource type="BoxShape" id=18]
-extents = Vector3( 1, 0.001, 1.12587 )
+extents = Vector3( 0.032047, 1, 1.23333 )
 
 [sub_resource type="PanoramaSky" id=19]
 panorama = ExtResource( 13 )
@@ -135,9 +135,10 @@ extents = Vector3( 14.1534, 0.213511, 10.6785 )
 script = ExtResource( 6 )
 
 [node name="iceCream" parent="." instance=ExtResource( 4 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.15, 1.925 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.300439, 1.925 )
 
 [node name="Ground" type="StaticBody" parent="."]
+collision_mask = 7
 
 [node name="CollisionShape" type="CollisionShape" parent="Ground"]
 transform = Transform( 60, 0, 0, 0, 0, 0, 0, 0, 60, 0, 0, 0 )
@@ -173,6 +174,7 @@ directional_shadow_blend_splits = true
 
 [node name="ButterPickup" parent="." instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54853, 0.0505172, 1.62528 )
+collision_mask = 5
 type = "butter"
 
 [node name="hay_bale" parent="." instance=ExtResource( 17 )]
@@ -307,10 +309,10 @@ transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -6.54295, -0.0357646,
 
 [node name="CollisionShape2" type="CollisionShape" parent="Trees/Tree_1/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.398554, 4.96425, 0.912883 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Trees/Tree_1/StaticBody"]
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="LogStack_1" parent="Trees" instance=ExtResource( 10 )]
 transform = Transform( -0.0111526, 0, -0.999938, 0, 1, 0, 0.999938, 0, -0.0111526, 17.0083, 0.195682, -13.7795 )
@@ -321,10 +323,11 @@ transform = Transform( -0.0111526, 0, -0.999938, 0, 1, 0, 0.999938, 0, -0.011152
 shape = SubResource( 6 )
 
 [node name="MILK_carton" parent="." instance=ExtResource( 9 )]
-transform = Transform( 0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0.52415 )
+transform = Transform( 0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.162757, 0.52415 )
 
 [node name="CheesePickable" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.57352 )
+collision_mask = 5
 
 [node name="CollisionShape" parent="CheesePickable" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.067086, 0.0468557, -0.00843096 )
@@ -334,10 +337,11 @@ transform = Transform( 0.4, 0, 0, 0, 2, 0, 0, 0, 0.4, 0.196106, -0.92115, 0.7752
 
 [node name="CartonPickup" parent="." instance=ExtResource( 16 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.29841 )
+collision_mask = 5
 type = "carton"
 
 [node name="MILK_carton" parent="CartonPickup/MeshInstance" index="0"]
-transform = Transform( 0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.00780571, -0.00190681, 0.0359757 )
+transform = Transform( 0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.00780571, 0.203449, 0.0359757 )
 
 [node name="Yogurt" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 7.14 )
@@ -345,10 +349,12 @@ transform = Transform( 0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 7.14 )
 [node name="IceCreamPickup" parent="." instance=ExtResource( 11 )]
 
 [node name="PickableObject" parent="IceCreamPickup" index="0"]
+collision_layer = 4
+collision_mask = 5
 type = "icecream"
 
 [node name="PlayerMovement" parent="." instance=ExtResource( 8 )]
-transform = Transform( -0.848252, 0, 0.529594, 0, 1, 0, -0.529594, 0, -0.848252, 0, 0, 0 )
+transform = Transform( -0.848252, 0, 0.529594, 0, 1, 0, -0.529594, 0, -0.848252, 0, 0, -0.811063 )
 
 [node name="MeshInstance" type="MeshInstance" parent="PlayerMovement"]
 transform = Transform( 0.427058, 0, 0.904224, 0, 10, 0, -0.904224, 0, 0.427058, 0, 1.7, 0 )
@@ -359,51 +365,57 @@ material/0 = SubResource( 8 )
 [node name="Low_Poly_Barn" parent="." instance=ExtResource( 1 )]
 transform = Transform( -4.88762e-07, 0, -3, 0, 5, 0, 3, 0, -4.88762e-07, 4.00754, 0, -0.000114679 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Low_Poly_Barn"]
+[node name="StaticBody" type="StaticBody" parent="Low_Poly_Barn"]
+collision_mask = 7
+
+[node name="CollisionShape" type="CollisionShape" parent="Low_Poly_Barn/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4149, 0, -1.22919 )
 shape = SubResource( 9 )
 
-[node name="CollisionShape2" type="CollisionShape" parent="Low_Poly_Barn"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0240856, 0, -1.21647 )
+[node name="CollisionShape10" type="CollisionShape" parent="Low_Poly_Barn/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24812, 0.961086, -1.16702 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape3" type="CollisionShape" parent="Low_Poly_Barn"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21376, 0, -2.3571 )
+[node name="CollisionShape9" type="CollisionShape" parent="Low_Poly_Barn/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22234, 0, -1.15976 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape4" type="CollisionShape" parent="Low_Poly_Barn"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.301946, 0, 0.0123733 )
+[node name="CollisionShape8" type="CollisionShape" parent="Low_Poly_Barn/StaticBody"]
+transform = Transform( 0.961026, 0, -0.276459, 0, 1, 0, 0.276459, 0, 0.961026, 0.562763, 0, 0.345361 )
 shape = SubResource( 12 )
 
-[node name="CollisionShape5" type="CollisionShape" parent="Low_Poly_Barn"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13142, 0, 0.0499866 )
+[node name="CollisionShape7" type="CollisionShape" parent="Low_Poly_Barn/StaticBody"]
+transform = Transform( 0.962938, 0, 0.269727, 0, 1, 0, -0.269727, 0, 0.962938, 1.89658, 0, 0.35241 )
 shape = SubResource( 13 )
 
-[node name="CollisionShape6" type="CollisionShape" parent="Low_Poly_Barn"]
+[node name="CollisionShape6" type="CollisionShape" parent="Low_Poly_Barn/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18326, 1.08842, 0.0610663 )
 shape = SubResource( 14 )
 
-[node name="CollisionShape7" type="CollisionShape" parent="Low_Poly_Barn"]
-transform = Transform( 0.962938, 0, 0.269727, 0, 1, 0, -0.269727, 0, 0.962938, 1.89658, 0, 0.35241 )
+[node name="CollisionShape5" type="CollisionShape" parent="Low_Poly_Barn/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13142, 0, 0.0499866 )
 shape = SubResource( 15 )
 
-[node name="CollisionShape8" type="CollisionShape" parent="Low_Poly_Barn"]
-transform = Transform( 0.961026, 0, -0.276459, 0, 1, 0, 0.276459, 0, 0.961026, 0.562763, 0, 0.345361 )
+[node name="CollisionShape4" type="CollisionShape" parent="Low_Poly_Barn/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.301946, 0, 0.0123733 )
 shape = SubResource( 16 )
 
-[node name="CollisionShape9" type="CollisionShape" parent="Low_Poly_Barn"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22234, 0, -1.15976 )
+[node name="CollisionShape3" type="CollisionShape" parent="Low_Poly_Barn/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21376, 0, -2.3571 )
 shape = SubResource( 17 )
 
-[node name="CollisionShape10" type="CollisionShape" parent="Low_Poly_Barn"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24812, 0.961086, -1.16702 )
+[node name="CollisionShape2" type="CollisionShape" parent="Low_Poly_Barn/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0240856, 0, -1.21647 )
 shape = SubResource( 18 )
 
 [node name="CratePickable" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.999965, 0.00834258, 0, -0.00834258, 0.999965, 0, 0, 0, 1, 1.09698, -0.12091, 1.02855 )
+transform = Transform( 0.999965, 0.00834258, 0, -0.00834258, 0.999965, 0, 0, 0, 1, 1.09698, 0.0962934, 1.02855 )
 
 [node name="PickableObject" parent="CratePickable" index="0"]
 type = "crate"
+
+[node name="Crate3" parent="CratePickable/PickableObject/MeshInstance" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00579894, 0.0837446, 0.25524 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 20 )
@@ -412,6 +424,7 @@ environment = SubResource( 20 )
 wait_time = 4.0
 
 [node name="HitBoxes" type="StaticBody" parent="."]
+collision_mask = 7
 
 [node name="CollisionShape" type="CollisionShape" parent="HitBoxes"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.10994, 7.21113, 3.6323 )
