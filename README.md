@@ -17,8 +17,9 @@ This project is a VR Demo for educational use and will be made for the Agricultu
 - [Farm Animal Sounds](https://opengameart.org/content/farm-animals)
 - [Background Scenery](https://free3d.com/3d-model/beautiful-scenery-morning-evening-night-370168.html)
 - [Low-poly Tree](https://opengameart.org/users/mitylernal)
-- Cheese & Yogurt: Made By The One and Only PHIL LYONS
-- Donut: Made By The One and Only Vitaliy Tsytsyk
-- Butter: Made By The One and Only Blake Bennett
-- Ice Cream: Made By The One and Only Vitaliy Tsysyk
-- Yogurt: Made By The One and Only Phil Lyons and His Apprentice Blake Bennett
+- Cheese & Yogurt: Phil
+- Donut: Vitaliy
+- Butter: Blake
+- Ice Cream: Vitaliy
+- Yogurt: Phil and Blake
+- New Barn: Blake, Vitaliy, Phil
