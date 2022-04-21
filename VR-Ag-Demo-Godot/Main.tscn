@@ -98,8 +98,6 @@ ambient_light_energy = 3.99
 fog_color = Color( 0.0627451, 0.470588, 0.878431, 1 )
 fog_sun_amount = 0.78
 tonemap_mode = 3
-tonemap_exposure = 1.5
-glow_enabled = true
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 6 )
@@ -146,7 +144,7 @@ directional_shadow_split_3 = 0.3
 directional_shadow_blend_splits = true
 
 [node name="ButterPickup" parent="." instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54853, 0.436414, 1.62528 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45147, 0.436414, 2.42323 )
 collision_mask = 5
 type = "butter"
 
