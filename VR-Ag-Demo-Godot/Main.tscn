@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Low_Poly_Barn.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CratePickable.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://assets/hay_bale/hay_bale.dae" type="PackedScene" id=17]
 [ext_resource path="res://assets/grass1-albedo3.png" type="Texture" id=18]
 [ext_resource path="res://lowpolytree.tscn" type="PackedScene" id=19]
+[ext_resource path="res://silo.tscn" type="PackedScene" id=20]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -101,38 +102,11 @@ tonemap_mode = 3
 tonemap_exposure = 1.5
 glow_enabled = true
 
-[sub_resource type="BoxShape" id=21]
-extents = Vector3( 0.0676645, 7.12545, 9.04656 )
-
-[sub_resource type="BoxShape" id=22]
-extents = Vector3( 6.94271, 14.3288, 0.0703332 )
-
-[sub_resource type="BoxShape" id=23]
-extents = Vector3( 8.30751, 14.2844, 0.068899 )
-
-[sub_resource type="BoxShape" id=24]
-extents = Vector3( 0.121451, 15.7658, 4.4436 )
-
-[sub_resource type="BoxShape" id=25]
-extents = Vector3( 0.0897437, 14.132, 0.974488 )
-
-[sub_resource type="BoxShape" id=26]
-extents = Vector3( 1.99527, 14.3798, 0.148662 )
-
-[sub_resource type="BoxShape" id=27]
-extents = Vector3( 1, 15.2557, 0.260266 )
-
-[sub_resource type="BoxShape" id=28]
-extents = Vector3( 1.35386, 15.1409, 0.191959 )
-
-[sub_resource type="BoxShape" id=29]
-extents = Vector3( 0.250883, 15.7514, 2.30884 )
-
-[sub_resource type="BoxShape" id=30]
-extents = Vector3( 14.1534, 0.213511, 10.6785 )
-
 [node name="Main" type="Spatial"]
 script = ExtResource( 6 )
+
+[node name="silo" parent="." instance=ExtResource( 20 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 13.699, -0.0505161, -8.86468 )
 
 [node name="iceCream" parent="." instance=ExtResource( 4 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.300439, 1.925 )
@@ -419,49 +393,6 @@ environment = SubResource( 20 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
-
-[node name="HitBoxes" type="StaticBody" parent="."]
-collision_mask = 7
-
-[node name="CollisionShape" type="CollisionShape" parent="HitBoxes"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.10994, 7.21113, 3.6323 )
-shape = SubResource( 21 )
-
-[node name="CollisionShape2" type="CollisionShape" parent="HitBoxes"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12592, 0, 12.4985 )
-shape = SubResource( 22 )
-
-[node name="CollisionShape3" type="CollisionShape" parent="HitBoxes"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.0252 )
-shape = SubResource( 23 )
-
-[node name="CollisionShape4" type="CollisionShape" parent="HitBoxes"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3399, 0, 2.98268 )
-shape = SubResource( 24 )
-
-[node name="CollisionShape5" type="CollisionShape" parent="HitBoxes"]
-transform = Transform( 0.828461, 0, 0.560046, 0, 1, 0, -0.560046, 0, 0.828461, 10.6132, 1.355, -2.28693 )
-shape = SubResource( 25 )
-
-[node name="CollisionShape6" type="CollisionShape" parent="HitBoxes"]
-transform = Transform( 0.777421, 0, -0.628981, 0, 1, 0, 0.628981, 0, 0.777421, 8.67068, 0, -4.36057 )
-shape = SubResource( 26 )
-
-[node name="CollisionShape7" type="CollisionShape" parent="HitBoxes"]
-transform = Transform( 0.832699, 0, 0.553726, 0, 1, 0, -0.553726, 0, 0.832699, 9.10466, 0, 11.1917 )
-shape = SubResource( 27 )
-
-[node name="CollisionShape8" type="CollisionShape" parent="HitBoxes"]
-transform = Transform( 0.943176, 0, 0.332293, 0, 1, 0, -0.332293, 0, 0.943176, 7.01541, 0, 12.1208 )
-shape = SubResource( 28 )
-
-[node name="CollisionShape9" type="CollisionShape" parent="HitBoxes"]
-transform = Transform( 0.903036, 0, -0.429566, 0, 1, 0, 0.429566, 0, 0.903036, 10.6112, 0, 9.49329 )
-shape = SubResource( 29 )
-
-[node name="CollisionShape10" type="CollisionShape" parent="HitBoxes"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87816, 13.215, 3.48463 )
-shape = SubResource( 30 )
 
 [node name="Alltrees" type="Spatial" parent="."]
 transform = Transform( -0.841124, 0, -0.540842, 0, 10, 0, 0.540842, 0, -0.841124, 0, 1.7, 0 )
