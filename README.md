@@ -17,6 +17,7 @@ This project is a VR Demo for educational use and will be made for the Agricultu
 - [Farm Animal Sounds](https://opengameart.org/content/farm-animals)
 - [Background Scenery](https://free3d.com/3d-model/beautiful-scenery-morning-evening-night-370168.html)
 - [Low-poly Tree](https://opengameart.org/users/mitylernal)
+- VR Hands by [TwistedTwigleg](https://github.com/TwistedTwigleg)
 - Cheese & Yogurt: Phil
 - Donut: Vitaliy
 - Butter: Blake
