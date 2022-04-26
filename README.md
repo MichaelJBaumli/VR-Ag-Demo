@@ -19,6 +19,7 @@ This project is a VR Demo for educational use and will be made for the Agricultu
 - [Low-poly Tree](https://opengameart.org/users/mitylernal)
 - VR Hands by [TwistedTwigleg](https://github.com/TwistedTwigleg)
 - [Nice Table](https://thetragedianfalls.itch.io/)
+- [Foliage](https://loafbrr.itch.io/)
 - Cheese & Yogurt: Phil
 - Donut: Vitaliy
 - Butter: Blake
