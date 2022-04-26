@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Low_Poly_Barn.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CratePickable.tscn" type="PackedScene" id=2]
@@ -21,6 +21,10 @@
 [ext_resource path="res://lowpolytree.tscn" type="PackedScene" id=19]
 [ext_resource path="res://silo.tscn" type="PackedScene" id=20]
 [ext_resource path="res://donutPickup.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/Planks_004_Old.material" type="Material" id=22]
+[ext_resource path="res://assets/mat_001.material" type="Material" id=23]
+[ext_resource path="res://assets/Wood.material" type="Material" id=24]
+[ext_resource path="res://assets/DarkStone.material" type="Material" id=25]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -101,6 +105,8 @@ fog_color = Color( 0.0627451, 0.470588, 0.878431, 1 )
 fog_sun_amount = 0.78
 tonemap_mode = 3
 
+[sub_resource type="QuadMesh" id=21]
+
 [node name="Main" type="Spatial"]
 script = ExtResource( 6 )
 
@@ -148,8 +154,6 @@ directional_shadow_blend_splits = true
 [node name="ButterPickup" parent="." instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45147, 0.436414, 2.42323 )
 collision_mask = 5
-press_to_hold = true
-reset_transform_on_pickup = true
 type = "butter"
 
 [node name="CollisionShape" parent="ButterPickup" index="1"]
@@ -312,9 +316,6 @@ shape = SubResource( 6 )
 [node name="CheesePickable" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.57352 )
 collision_mask = 5
-press_to_hold = true
-reset_transform_on_pickup = true
-type = "cheese"
 
 [node name="CollisionShape" parent="CheesePickable" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.067086, 0.0468557, -0.00843096 )
@@ -325,8 +326,6 @@ transform = Transform( 0.4, 0, 0, 0, 2, 0, 0, 0, 0.4, 0.196106, -0.92115, 0.7752
 [node name="CartonPickup" parent="." instance=ExtResource( 16 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.29841 )
 collision_mask = 5
-press_to_hold = true
-reset_transform_on_pickup = true
 type = "carton"
 
 [node name="MILK_carton" parent="CartonPickup/MeshInstance" index="0"]
@@ -340,9 +339,6 @@ transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0.305763, 2.90645 )
 [node name="PickableObject" parent="IceCreamPickup" index="0"]
 collision_layer = 4
 collision_mask = 5
-press_to_hold = true
-reset_transform_on_pickup = true
-picked_up_layer = 0
 type = "icecream"
 
 [node name="PlayerMovement" parent="." instance=ExtResource( 8 )]
@@ -404,9 +400,6 @@ shape = SubResource( 18 )
 transform = Transform( 0.999965, 0.00834258, 0, -0.00834258, 0.999965, 0, 0, 0, 1, 1.09698, 0.0962934, 1.02855 )
 
 [node name="PickableObject" parent="CratePickable" index="0"]
-press_to_hold = true
-reset_transform_on_pickup = true
-picked_up_layer = 0
 type = "crate"
 
 [node name="donutSprinklesPickup" parent="." instance=ExtResource( 9 )]
@@ -744,17 +737,43 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.8378, 0, 11.098 )
 
 [node name="tree3" parent="Alltrees/Trees6" instance=ExtResource( 19 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.8378, 0, 3.82769 )
+
+[node name="PenaltyBox" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -39.7797, 0.0378125 )
+mesh = SubResource( 21 )
+material/0 = ExtResource( 23 )
+
+[node name="PenaltyBox2" type="MeshInstance" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -39.7797, 1.02768 )
+mesh = SubResource( 21 )
+material/0 = ExtResource( 24 )
+
+[node name="PenaltyBox3" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.495255, -39.7797, 0.530444 )
+mesh = SubResource( 21 )
+material/0 = ExtResource( 24 )
+
+[node name="PenaltyBox4" type="MeshInstance" parent="."]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.418095, -39.7797, 0.527636 )
+mesh = SubResource( 21 )
+material/0 = ExtResource( 24 )
+
+[node name="PenaltyBox5" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, -40.2761, 0.535331 )
+mesh = SubResource( 21 )
+material/0 = ExtResource( 22 )
+
+[node name="PenaltyBox6" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -39.3112, 0.535331 )
+mesh = SubResource( 21 )
+material/0 = ExtResource( 25 )
+
 [connection signal="area_entered" from="CratePickable/PickableObject/Area" to="." method="_on_Area_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 [editable path="iceCream"]
-
 [editable path="ButterPickup"]
-
 [editable path="CheesePickable"]
-
 [editable path="CartonPickup"]
-
 [editable path="IceCreamPickup"]
-
 [editable path="CratePickable"]
