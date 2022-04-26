@@ -24,4 +24,4 @@ This project is a VR Demo for educational use and will be made for the Agricultu
 - Butter: Blake
 - Ice Cream: Vitaliy
 - Yogurt: Phil and Blake
-- New Barn: Blake, Vitaliy, Phil
+- Barn: Blake, Vitaliy, Phil
