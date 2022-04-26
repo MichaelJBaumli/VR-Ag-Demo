@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://donutSprinkles.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/godot-xr-tools/objects/Object_pickable.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.046486
+height = 0.0428222
+
+[node name="donutPickup" type="Spatial"]
+
+[node name="PickableObject" parent="." instance=ExtResource( 2 )]
+can_sleep = false
+press_to_hold = true
+reset_transform_on_pickup = true
+highlight_mesh_instance = NodePath("MeshInstance")
+picked_up_layer = 0
+type = "cheese"
+
+[node name="pickupCenter" type="Spatial" parent="PickableObject"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00728585, 0 )
+
+[node name="donut" type="CollisionShape" parent="PickableObject"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00254474, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="PickableObject"]
+
+[node name="donutSprinkles2" parent="PickableObject/MeshInstance" instance=ExtResource( 1 )]
+transform = Transform( 0.495556, 0.861305, -0.112152, -0.665617, 0.459534, 0.588033, 0.558013, -0.216753, 0.801024, 0, 0, 0 )
