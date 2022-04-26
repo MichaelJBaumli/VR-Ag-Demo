@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/table_nice.obj-53c4279dca7009ee5678425c899c1715.mesh"
+
+[deps]
+
+files=[ "res://.import/table_nice.obj-53c4279dca7009ee5678425c899c1715.mesh" ]
+
+source_file="res://assets/table_nice.obj"
+dest_files=[ "res://.import/table_nice.obj-53c4279dca7009ee5678425c899c1715.mesh", "res://.import/table_nice.obj-53c4279dca7009ee5678425c899c1715.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
