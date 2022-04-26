@@ -34,14 +34,6 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="Function_Teleport" parent="FPSController/LeftHandController" index="2" instance=ExtResource( 2 )]
-enabled = true
-teleport_button = 15
-can_teleport_color = Color( 0, 1, 0, 1 )
-cant_teleport_color = Color( 1, 0, 0, 1 )
-player_height = 1.8
-player_radius = 0.4
-strength = 5.0
-max_slope = 20.0
 camera = NodePath("../../ARVRCamera")
 
 [node name="Grab_Pos" type="Position3D" parent="FPSController/LeftHandController" index="3"]
@@ -51,9 +43,9 @@ camera = NodePath("../../ARVRCamera")
 [node name="Mesh" type="MeshInstance" parent="FPSController/LeftHandController/GrabCast"]
 
 [node name="Area" type="Area" parent="FPSController/LeftHandController" index="5"]
-input_ray_pickable = false
 collision_layer = 2
 collision_mask = 2147483653
+input_ray_pickable = false
 
 [node name="CollisionShape" type="CollisionShape" parent="FPSController/LeftHandController/Area"]
 
@@ -73,9 +65,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
 
 [node name="Area" type="Area" parent="FPSController/RightHandController" index="3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
-input_ray_pickable = false
 collision_layer = 2
 collision_mask = 5
+input_ray_pickable = false
 
 [node name="CollisionShape" type="CollisionShape" parent="FPSController/RightHandController/Area"]
 
