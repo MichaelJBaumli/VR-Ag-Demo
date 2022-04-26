@@ -8,7 +8,6 @@ This project is a VR Demo for educational use and will be made for the Agricultu
 - Godot Engine
 
 ## Assets
-- [Barn](https://periltek.itch.io/)
 - [Milk Carton](https://daniels12.itch.io/)
 - [Skyboxes](https://kindaw.itch.io/)
 - [Haybale](https://opengameart.org/content/hay-bale)
